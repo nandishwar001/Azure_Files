@@ -1,0 +1,15 @@
+Creating Storage Account using CLI:
+__________________________________________
+az storage account create --location "West India" --name storageclidemo1 --resource-group "teamdbgroup" --sku "Standard_LRS"
+__________________________________________
+
+Creating Container in Storage using CLI:
+__________________________________________
+az storage container create --name "nandishwar135" --account-name=storageclidemo1 --account-key=1HOURGiQl6LnIO+p2uD8lLl/COJs+lWnnHLZdfQGxaGPUmR9A/L/5XBDHaNPgTtsEP5Aksl/MwTpA1jxJU+JDA==
+__________________________________________
+
+Uploading files to the container using CLI:
+___________________________________________
+az storage blob upload --file "D:\Nandishwar.txt" --container-name "nandishwar135" --name Nandishwar.txt --account-name=storageclidemo1 --account-key=1HOURGiQl6LnIO+p2uD8lLl/COJs+lWnnHLZdfQGxaGPUmR9A/L/5XBDHaNPgTtsEP5Aksl/MwTpA1jxJU+JDA==
+
+
