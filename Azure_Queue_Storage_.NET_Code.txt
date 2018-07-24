@@ -1,0 +1,19 @@
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
+using System;
+
+namespace QueueApp
+{
+
+    public class Program
+    {
+        static String conn = "DefaultEndpointsProtocol=https;AccountName=mystorage20181;AccountKey=Q+vTAbQl6re197OUHeHInNEC6rx4JN4oVYZMpnt38+ePu7qiH6V3c7aD2FKc+ImmjizL5tlnqmYAEEUm5l9HPA==;EndpointSuffix=core.windows.net";
+
+        public static void Main()
+        {
+            //CloudStorageAccount storageAccount = CloudStorageAccount.Parse(conn);
+            //CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+            Console.WriteLine("Hello World");
+        }
+    }
+}
