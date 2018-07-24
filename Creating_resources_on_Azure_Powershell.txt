@@ -1,0 +1,17 @@
+Steps: 
+-> Connect-AzureRmAccount
+-> $location = "Central India"
+-> $resourceGroup = "teamdbgroup"
+-> $storageAccountName = "nandishwarpowershell"
+-> $skuName = "Standard_LRS"
+-> $storageAccount = New-AzureRmStorageAccount -ResourceGroupName $resourceGroup -Name $storageAccountName -Location $location -SkuName $skuName 
+____________________________________________________
+Context of Storage Account for creating Container
+_____________________________________________________
+-> $ctx = $storageAccount.Context
+-> $containerName = "nandishwar123"
+-> New-AzureStorageContainer -Name $containerName -Context $ctx -Permission blob
+___________________________________________
+Adding Blob to the created Container 
+___________________________________________
+Set-AzureStorageBlobContent -File "Desktop\Nandishwar.txt" -Container $containerName -Blob "Nandishwar.txt" -Context $ctx
